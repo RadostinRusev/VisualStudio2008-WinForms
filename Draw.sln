@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draw", "Draw.csproj", "{B7A9A968-DE7B-4537-9423-9D8ED1A72BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delete2", "..\delete2\delete2.csproj", "{D0C50234-9113-4F27-962A-B047478C2228}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7A9A968-DE7B-4537-9423-9D8ED1A72BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A9A968-DE7B-4537-9423-9D8ED1A72BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A9A968-DE7B-4537-9423-9D8ED1A72BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A9A968-DE7B-4537-9423-9D8ED1A72BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0C50234-9113-4F27-962A-B047478C2228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C50234-9113-4F27-962A-B047478C2228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C50234-9113-4F27-962A-B047478C2228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C50234-9113-4F27-962A-B047478C2228}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C561620-48F8-41E4-A2C2-04112F2D9EF7}
+	EndGlobalSection
+EndGlobal
