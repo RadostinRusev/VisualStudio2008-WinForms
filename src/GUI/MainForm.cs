@@ -21,7 +21,7 @@ namespace Draw
 		/// Агрегирания диалогов процесор във формата улеснява манипулацията на модела.
 		/// </summary>
 		public DialogProcessor dialogProcessor = new DialogProcessor();
-		
+	public 	List<Type> g = new List<Type>();
 		public MainForm()
 		{
 			//
@@ -247,10 +247,11 @@ namespace Draw
         {
 			Stream myStream;
 			SaveFileDialog savefile1 = new SaveFileDialog();
-			List<Type> g = new List<Type>();
+			
 			savefile1.Filter = "xml files |*.xml";
 			savefile1.FilterIndex = 2;
 			savefile1.RestoreDirectory = true;
+			List<Shape> shapes = new List<Shape>();
 
 			if (savefile1.ShowDialog() == DialogResult.OK)
 			{
@@ -258,30 +259,39 @@ namespace Draw
 				{
 					foreach(Shape item in dialogProcessor.ShapeList)
                     {
-						g.Add(item.GetType().);
+						g.Add(item.GetType());
 						
-
                     }
-					foreach(Type type in g)
+                    for (int i = g.Count; i >= 0; i--)
                     {
-						Console.WriteLine(type.ToString());
-				
-						
-
+						var s = g[i].Name;
+                       if (g[i].Name == "RectangleShape")
+                        {
+							RectangleShape rect = new RectangleShape();
+							rect.Width = this.Width;
+							rect.Height = this.Height;
+							rect.Location = this.Location;
+							shapes.Add(rect);
+						}
+						if (g[i].Name == "EclipseShape")
+						{
+							EclipseShape values = new EclipseShape();
+							values.Width = this.Width;
+							values.Height = this.Height;
+							values.Location = this.Location;
+							shapes.Add(values);
+						}
 					}
-					triangleshape values = new triangleshape(new Rectangle(250, 250, 200, 200));
-					values.Width = this.Width;
-					values.Height = this.Height;
-					values.Location = this.Location;
+					
 					myStream.Close();
-					SaveValues(savefile1.FileName, values);
+					SaveValues(savefile1.FileName, shapes);
 				}
 				
 			}
 		}
-		public void SaveValues(string fileName, Shape v)
+		public void SaveValues(string fileName, List<Shape> v)
 		{
-			XmlSerializer serializer = new XmlSerializer(typeof(triangleshape));
+			XmlSerializer serializer = new XmlSerializer(typeof(List<Shape>));
 			using (TextWriter textWriter = new StreamWriter(fileName))
 			{
 				serializer.Serialize(textWriter, v);

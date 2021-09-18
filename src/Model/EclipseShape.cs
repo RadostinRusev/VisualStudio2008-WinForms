@@ -8,19 +8,19 @@ using System.Text;
 namespace Draw.src.Model
 {
 	[Serializable]
-	public class triangleshape : Shape
+	public class EclipseShape : Shape
 	{
 		#region Constructor
-		public triangleshape()
+		public EclipseShape()
         {
 
         }
-		public triangleshape(RectangleF rect) : base(rect)
+		public EclipseShape(RectangleF rect) : base(rect)
 		{
 			
 		}
 
-		public triangleshape(RectangleShape rectangle) : base(rectangle)
+		public EclipseShape(RectangleShape rectangle) : base(rectangle)
 		{
 		}
 		float x, y, h, w;

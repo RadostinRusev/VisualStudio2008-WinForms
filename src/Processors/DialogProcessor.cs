@@ -74,7 +74,7 @@ namespace Draw
 			int x = Convert.ToInt32(width);
 			int y = Convert.ToInt32(height);
 
-			Line rect = new Line(50,100,100,333);
+			Line rect = new Line(50,100, x, y);
 			rect.FillColor = Color.White;
 			rect.BorderColor = Color.Black;
 
@@ -86,7 +86,7 @@ namespace Draw
 			int x = Convert.ToInt32(width);
 			int y = Convert.ToInt32(height);
 
-			triangleshape rect = new triangleshape(new Rectangle(250, 250, x, y));
+			EclipseShape rect = new EclipseShape(new Rectangle(250, 250, x, y));
 
 			rect.FillColor = Color.White;
 
@@ -95,8 +95,8 @@ namespace Draw
 		public void AddRandomTriangle(string width, string height)
 		{
 
-			int x = Convert.ToInt32(width);
-			int y = Convert.ToInt32(height);
+//			int x = Convert.ToInt32(width);
+	//		int y = Convert.ToInt32(height);
 
 			TriaangleShape rect = new TriaangleShape(50,400,200,100,200,600);
 
